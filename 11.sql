@@ -62,16 +62,16 @@
 -- +------+-------+
 
 
-select
+SELECT
   e.name,
-  b.bonus
-from
-  Employee e
-left outer join
-  Bonus b
-on
+  b.bonus,
+FROM
+  Employee AS e
+LEFT OUTER JOIN
+  Bonus AS b
+ON
   e.empId = b.empId
-where
+WHERE
   b.bonus < 1000
-  or b.bonus is null
+  OR b.bonus IS NULL
 ;

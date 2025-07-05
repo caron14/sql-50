@@ -11,11 +11,13 @@
 -- Each row of this table gives information about the name of a country, 
 -- the continent to which it belongs, its area, the population, and its GDP value.
 
-select
-  name, population, area
-from
+SELECT
+  name,
+  population,
+  area,
+FROM
   World
-where
+WHERE
   area >= 3000000
-  or population >= 25000000
+  OR population >= 25000000
 ;

@@ -1,23 +1,23 @@
-select
+SELECT
   r.contest_id,
-  round(
-    count(u.user_id) / (
-      select
-        count(*)
-      from 
+  ROUND(
+    COUNT(u.user_id) / (
+      SELECT
+        COUNT(*)
+      FROM
         Users
-    )
-    * 100
-  , 2) as percentage
-from
+    ) * 100,
+    2
+  ) AS percentage
+FROM
   Register r
-left join
+LEFT JOIN
   Users u
-on 
+ON
   u.user_id = r.user_id
-group by
+GROUP BY
   r.contest_id
-order by
+ORDER BY
   percentage DESC,
   r.contest_id
 ;

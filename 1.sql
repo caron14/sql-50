@@ -9,6 +9,7 @@
 -- | 3           | Y        | Y          |
 -- | 4           | N        | N          |
 -- +-------------+----------+------------+
+
 -- Output: 
 -- +-------------+
 -- | product_id  |
@@ -18,8 +19,12 @@
 -- +-------------+
 -- Explanation: Only products 1 and 3 are both low fat and recyclable.
 
-select product_id
-from Products
-where low_fats = "Y"
-and recyclable = "Y"
+SELECT
+  product_id
+FROM
+  Products
+WHERE
+  low_fats = 'Y'
+  AND recyclable = 'Y'
+;
 
