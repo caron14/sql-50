@@ -33,7 +33,13 @@
 -- The unique ID of Winston is 3.
 -- The unique ID of Jonathan is 1.
 
-select eu.unique_id, e.name
-from Employees e
-left join EmployeeUNI eu on e.id = eu.id
+SELECT
+  eu.unique_id,
+  e.name,
+FROM
+  Employees AS e
+LEFT JOIN
+  EmployeeUNI AS eu
+ON
+  e.id = eu.id
 ;

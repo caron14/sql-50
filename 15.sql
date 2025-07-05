@@ -44,14 +44,13 @@
 -- Explanation: 
 -- We have three movies with odd-numbered IDs: 1, 3, and 5. The movie with ID = 3 is boring so we do not include it in the answer.
 
-select
+SELECT
   *
-from
+FROM
   Cinema
-where
+WHERE
   description != 'boring'
-  and mod(id, 2) = 1
-  -- and id % 2 != 0
-order by
+  AND MOD(id, 2) = 1
+ORDER BY
   rating DESC
 ;

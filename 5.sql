@@ -16,10 +16,10 @@
 -- Tweet 1 has length = 14. It is a valid tweet.
 -- Tweet 2 has length = 32. It is an invalid tweet.
 
-select 
-  tweet_id
-from
+SELECT
+  tweet_id,
+FROM
   Tweets
-where
-  length(content) > 15
+WHERE
+  LENGTH(content) > 15
 ;
